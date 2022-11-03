@@ -1,4 +1,4 @@
-resource "aws_security_group" "sg-tf" {
+resource "aws_security_group" "sg-mvn" {
   name   = "ASG"
   vpc_id = aws_vpc.maven_project_vpc.id
 
