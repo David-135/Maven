@@ -1,4 +1,5 @@
-resource "aws_security_group" "sg" {
+resource "aws_security_group" "sg-tf" {
+  name   = "ASG"
   vpc_id = aws_vpc.maven_project_vpc.id
 
   ingress {
@@ -20,5 +21,9 @@ resource "aws_security_group" "sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "Scrty-group"
   }
 }
